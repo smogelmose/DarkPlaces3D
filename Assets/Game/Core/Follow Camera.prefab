@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8069016261121806438}
-  m_LocalRotation: {x: 0.5334171, y: 0.36531985, z: -0.27365494, w: 0.7121241}
-  m_LocalPosition: {x: -14.264953, y: 55.865257, z: -9.290052}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.22640418, y: -0.29210982, z: 0.07138496, w: 0.9264541}
+  m_LocalPosition: {x: 19.9, y: 28.6, z: -21.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8671607205632133963}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 24, y: 66, z: 0}
+  m_LocalEulerAnglesHint: {x: 27.465, y: -35, z: 0}
 --- !u!20 &8069016261121806436
 Camera:
   m_ObjectHideFlags: 0
@@ -47,9 +47,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -108,6 +116,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9218730367207658878}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.9446336, y: 1.8345227, z: 19.30504}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -115,7 +124,6 @@ Transform:
   m_Children:
   - {fileID: 8069016261121806435}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3464635500156733432
 MonoBehaviour:
