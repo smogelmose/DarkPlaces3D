@@ -6,7 +6,7 @@ namespace RPG.Combat
     {
         public void Attack(CombatTarget target)
         {
-            print("HAI!");
+            print("Attack!");
         }
     }
 }
