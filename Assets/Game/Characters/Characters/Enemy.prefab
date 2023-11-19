@@ -122,6 +122,10 @@ PrefabInstance:
       propertyPath: health
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4710461174766483212, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
+      propertyPath: healthPoints
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2440329221360870095, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
@@ -176,7 +180,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &6314581548495320784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4545520422387629265, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
