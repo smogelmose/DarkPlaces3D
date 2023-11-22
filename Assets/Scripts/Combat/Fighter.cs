@@ -39,9 +39,7 @@ namespace RPG.Combat
             {
                 // Triggers Hit() event
                 TriggerAttack();
-                timeSinceLastAttack = 0;
-
-                //target.TakeDamage(weaponDamage);
+                timeSinceLastAttack = 0;               
             }
         }
 
