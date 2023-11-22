@@ -26,12 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7904692362680596153}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.285, y: -3.154, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9221427738746266065
 MonoBehaviour:
@@ -45,7 +46,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e84ff758a500224bbf72e946445aea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializedGuid: GlobalObjectId_V1-2-00000000000000000000000000000000-9221427738746266065-0
+  squareSubdivisions: 2
+  debugMode: 1
+  quickDocs: 0
+  eventsFoldout: 0
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onFilled:
+    m_PersistentCalls:
+      m_Calls: []
+  onEmpty:
+    m_PersistentCalls:
+      m_Calls: []
+  onSegmentFilled:
+    m_PersistentCalls:
+      m_Calls: []
+  onSegmentEmpty:
+    m_PersistentCalls:
+      m_Calls: []
+  material: {fileID: 0}
+  mesh: {fileID: 0}
   pbValue: 0.5
   segmentCount: 1
   sides: 50
@@ -104,6 +125,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
+    m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   innerGradientEnabled: 0
@@ -149,6 +171,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
+    m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   backgroundTextureScaleWithSegments: 1
@@ -209,27 +232,6 @@ MonoBehaviour:
   overlayTextureEnabled: 0
   borderTextureEnabled: 0
   backgroundTextureEnabled: 0
-  squareSubdivisions: 2
-  debugMode: 1
-  quickDocs: 0
-  eventsFoldout: 0
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onFilled:
-    m_PersistentCalls:
-      m_Calls: []
-  onEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-  onSegmentFilled:
-    m_PersistentCalls:
-      m_Calls: []
-  onSegmentEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-  material: {fileID: 0}
-  mesh: {fileID: 0}
 --- !u!23 &1540832741624195370
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -241,6 +243,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
