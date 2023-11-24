@@ -1,41 +1,43 @@
+using RPG.Control;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
-namespace RPG.SceneManagement
+namespace RPG.SceneManagment
 {
+
     public class Portal : MonoBehaviour
     {
-       [SerializeField] int sceneToLoad = -1;
-       [SerializeField] Transform spawnPoint;
-
+        [SerializeField] int sceneToLoad = -1;
+        [SerializeField] Transform spawnPoint;
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Player")
             {
-                StartCoroutine(Transition());
+                StartCoroutine(SceneTransition());
             }
         }
 
-        private IEnumerator Transition()
+        private IEnumerator SceneTransition()
         {
             DontDestroyOnLoad(gameObject);
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
-            Portal otherPortal = GetotherPortal();
+            Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
             Destroy(gameObject);
         }
 
-        private static void UpdatePlayer(Portal otherPortal)
+        private void UpdatePlayer(Portal otherPortal)
         {
             GameObject player = GameObject.FindWithTag("Player");
-            player.transform.position = otherPortal.transform.position;
-            player.transform.rotation = otherPortal.transform.rotation;
+            player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.position);
+            player.transform.rotation = otherPortal.spawnPoint.rotation;
         }
 
-        private Portal GetotherPortal()
+        private Portal GetOtherPortal()
         {
             foreach (Portal portal in FindObjectsOfType<Portal>())
             {
@@ -43,7 +45,7 @@ namespace RPG.SceneManagement
 
                 return portal;
             }
-                return null;
-            }
+            return null;
         }
     }
+}
