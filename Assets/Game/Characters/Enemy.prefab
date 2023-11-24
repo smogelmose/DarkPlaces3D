@@ -70,6 +70,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 812014126119273508, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
+      propertyPath: weaponDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2967310584004071432, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -84,7 +88,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4545520422387629265, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4545520422387629265, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
       propertyPath: m_LocalRotation.w
@@ -120,7 +124,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4710461174766483212, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
       propertyPath: healthPoints
-      value: 20
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805703930864654885, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805703930864654885, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -136,6 +148,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2967310584004071432, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6659792196522778862}
+    - targetCorrespondingSourceObject: {fileID: 2967310584004071432, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6431144358588758981}
   m_SourcePrefab: {fileID: 100100000, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}
 --- !u!1 &4727382725540960777 stripped
 GameObject:
@@ -176,7 +191,25 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.77, z: 0}
+--- !u!114 &6431144358588758981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4727382725540960777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e0ab276e88ab44aa063680be2f783c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 5
+  alertTime: 3
+  patrolPath: {fileID: 0}
+  waypointTolerance: 4
+  waypointDwellTime: 3
+  patrolSpeedFraction: 0.3
 --- !u!4 &6314581548495320784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4545520422387629265, guid: 1d42a29b46f0ead44bdd4a3d8dee46db, type: 3}

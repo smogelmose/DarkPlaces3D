@@ -23,7 +23,7 @@ namespace RPG.Combat
            
             if (!GetIsInRange())
             {
-                GetComponent<PlayerMovement>().MoveTo(target.transform.position);
+                GetComponent<PlayerMovement>().MoveTo(target.transform.position, 1f);
             }
             else
             {
